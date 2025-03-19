@@ -17,8 +17,8 @@ A lightweight, elegant theme switcher for web applications that allows users to 
 
 ## Live Demo
 
-You can see a live demo of this project on GitLab Pages:
-https://shadoll.gitlab.io/theme_switch/
+You can see a live demo of this project on GitHub Pages:
+https://shadoll.github.io/theme-switcher/
 
 ## How It Works
 
@@ -74,7 +74,6 @@ To prevent flash of unstyled content when loading in dark mode, the project incl
 
 The theme switcher uses CSS custom properties (variables) to define theme colors.
 
-
 ## Browser Support
 
 This theme switcher works in all modern browsers that support:
@@ -85,10 +84,6 @@ This theme switcher works in all modern browsers that support:
 ## License
 
 This project is available for use under the MIT License.
-
-## Author
-
-Created by sHa.
 
 ## Getting Started
 
