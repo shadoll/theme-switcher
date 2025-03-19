@@ -18,7 +18,7 @@ A lightweight, elegant theme switcher for web applications that allows users to 
 ## Live Demo
 
 You can see a live demo of this project on GitLab Pages:
-https://[your-gitlab-username].gitlab.io/theme_switch/
+https://shadoll.gitlab.io/theme_switch/
 
 ## How It Works
 
@@ -74,16 +74,6 @@ To prevent flash of unstyled content when loading in dark mode, the project incl
 
 The theme switcher uses CSS custom properties (variables) to define theme colors.
 
-## Deploying to GitLab Pages
-
-This project is configured to automatically deploy to GitLab Pages when changes are pushed to the main branch. The deployment is handled by the GitLab CI/CD pipeline defined in `.gitlab-ci.yml`.
-
-To deploy your own instance:
-
-1. Fork this repository
-2. Push changes to the main branch
-3. Wait for the pipeline to complete
-4. Access your site at https://[your-gitlab-username].gitlab.io/theme_switch/
 
 ## Browser Support
 
