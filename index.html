@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Switcher Demo</title>
+    <script>
+        // Immediately set theme before page renders
+        const savedTheme = localStorage.getItem('preferred-theme') || 'system';
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else if (savedTheme === 'system') {
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.setAttribute('data-theme', prefersDarkScheme ? 'dark' : 'light');
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Theme Switcher Demo</h1>
+        <div class="theme-controls">
+            <button id="theme-menu-toggle" class="theme-menu-toggle" aria-label="Theme settings">
+                <img id="toggle-icon" src="system.svg" alt="Theme settings" />
+            </button>
+
+            <div id="theme-menu" class="theme-menu">
+                <div class="menu-section">
+                    <h4>Theme</h4>
+                    <div class="theme-button-group">
+                        <button class="theme-button" data-theme="light" aria-label="Light theme">
+                            <img src="sun.svg" alt="Light theme" class="theme-icon" />
+                            <span>Light</span>
+                        </button>
+                        <button class="theme-button" data-theme="dark" aria-label="Dark theme">
+                            <img src="moon.svg" alt="Dark theme" class="theme-icon" />
+                            <span>Dark</span>
+                        </button>
+                        <button class="theme-button" data-theme="system" aria-label="System theme">
+                            <img src="system.svg" alt="System theme" class="theme-icon" />
+                            <span>System</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-section">
+                    <h4>Accent Color</h4>
+                    <div class="accent-color-control">
+                        <input type="color" id="accent-color" value="#4a90e2">
+                        <span class="accent-color-preview" id="accent-color-preview"></span>
+                        <label for="accent-color">Select accent color</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="content">
+            <h2>Welcome to the Theme Switcher</h2>
+            <p>This is a demonstration of a theme switcher that allows you to choose between light, dark, or system theme preferences.</p>
+            <p>Your theme preference will be stored in local storage and remembered when you return.</p>
+        </section>
+
+        <section class="demo-elements">
+            <h3>Demo Elements</h3>
+
+            <div class="card">
+                <h4>Sample Card</h4>
+                <p>This is a sample card element to demonstrate theming capabilities.</p>
+                <button class="btn">Sample Button</button>
+            </div>
+
+            <form class="demo-form">
+                <h4>Sample Form</h4>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Developed by sHa. Theme Switcher Demo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
