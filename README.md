@@ -15,14 +15,10 @@ A lightweight, elegant theme switcher for web applications that allows users to 
 - **Modern UI** with accessible controls
 - **Smooth transitions** between themes
 
-## Demo
+## Live Demo
 
-The project includes a demo page with various UI elements to showcase the theme switching capabilities:
-- Text elements (headings, paragraphs)
-- Cards with different backgrounds
-- Buttons
-- Form elements
-- Footer
+You can see a live demo of this project on GitLab Pages:
+https://[your-gitlab-username].gitlab.io/theme_switch/
 
 ## How It Works
 
@@ -76,22 +72,18 @@ To prevent flash of unstyled content when loading in dark mode, the project incl
 
 ### CSS Variables
 
-The theme switcher uses CSS custom properties (variables) to define theme colors:
+The theme switcher uses CSS custom properties (variables) to define theme colors.
 
-```css
-:root {
-    --background-color: #ffffff;
-    --text-color: #333333;
-    --accent-color: #4a90e2;
-    /* more variables... */
-}
+## Deploying to GitLab Pages
 
-[data-theme="dark"] {
-    --background-color: #1a1a1a;
-    --text-color: #f5f5f5;
-    /* more variables... */
-}
-```
+This project is configured to automatically deploy to GitLab Pages when changes are pushed to the main branch. The deployment is handled by the GitLab CI/CD pipeline defined in `.gitlab-ci.yml`.
+
+To deploy your own instance:
+
+1. Fork this repository
+2. Push changes to the main branch
+3. Wait for the pipeline to complete
+4. Access your site at https://[your-gitlab-username].gitlab.io/theme_switch/
 
 ## Browser Support
 
